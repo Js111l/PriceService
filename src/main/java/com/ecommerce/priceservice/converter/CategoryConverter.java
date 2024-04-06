@@ -1,6 +1,6 @@
 package com.ecommerce.priceservice.converter;
 
-import com.ecommerce.priceservice.entity.Category;
+import com.ecommerce.priceservice.util.Category;
 import jakarta.persistence.AttributeConverter;
 
 public class CategoryConverter implements AttributeConverter<Category, String> {

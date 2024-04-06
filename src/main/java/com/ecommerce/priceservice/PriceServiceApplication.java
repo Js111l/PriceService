@@ -10,17 +10,4 @@ public class PriceServiceApplication {
     SpringApplication.run(PriceServiceApplication.class, args);
   }
 
-//  @Autowired
-//  QueryUtil queryUtil;
-
-//  @Bean
-//  ApplicationListener<ApplicationReadyEvent> applicationReadyEventApplicationListener() {
-//    return new ApplicationListener<ApplicationReadyEvent>() {
-//      @Override
-//      public void onApplicationEvent(ApplicationReadyEvent event) {
-//        queryUtil.save();
-//      }
-//    };
-//  }
-
 }

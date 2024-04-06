@@ -1,6 +1,6 @@
 package com.ecommerce.priceservice.repository;
 
-import com.ecommerce.priceservice.entity.Price;
+import com.ecommerce.priceservice.dao.entity.Price;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

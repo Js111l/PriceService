@@ -1,7 +1,7 @@
 package com.ecommerce.priceservice.repository;
 
 
-import com.ecommerce.priceservice.entity.Promotion;
+import com.ecommerce.priceservice.dao.entity.Promotion;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;

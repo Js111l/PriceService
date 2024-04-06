@@ -1,6 +1,6 @@
 package com.ecommerce.priceservice.service;
 
-import com.ecommerce.priceservice.entity.Promotion;
+import com.ecommerce.priceservice.dao.entity.Promotion;
 import com.ecommerce.priceservice.exceptions.ErrorKey;
 import com.ecommerce.priceservice.exceptions.LogicalException;
 import com.ecommerce.priceservice.repository.PromotionRepository;
@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
+@SafeTransactional
 public class PromotionService {
 
   private final PromotionRepository promotionRepository;

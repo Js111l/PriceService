@@ -1,6 +1,6 @@
 package com.ecommerce.priceservice.controller;
 
-import com.ecommerce.priceservice.entity.Promotion;
+import com.ecommerce.priceservice.dao.entity.Promotion;
 import com.ecommerce.priceservice.service.PromotionService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/promotions")
 public class PromotionController {
-
   private final PromotionService promotionService;
-
-
   public PromotionController(PromotionService promotionService) {
     this.promotionService = promotionService;
   }
-
   @PostMapping
   public Promotion savePromotion(Promotion promotion) {
     return this.promotionService.savePromotion(promotion);

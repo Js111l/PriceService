@@ -1,6 +1,6 @@
 package com.ecommerce.priceservice.model;
 
-import com.ecommerce.priceservice.entity.Category;
+import com.ecommerce.priceservice.util.Category;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;

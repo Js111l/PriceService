@@ -1,5 +1,6 @@
 package com.ecommerce.priceservice.controller;
 
+import com.ecommerce.priceservice.model.ProductPriceModel;
 import com.ecommerce.priceservice.service.PriceService;
 import java.math.BigDecimal;
 import java.util.List;
@@ -19,7 +20,7 @@ public class PriceController {
   }
 
   @GetMapping()
-  public BigDecimal calculateFinalPrice(@RequestBody List<Long> productIds) {
-  return this.priceService.getFinalPrice(productIds);
+  public List<ProductPriceModel> calculateFinalPrice(@RequestBody List<Long> productIds) {
+    return this.priceService.getFinalPrice(productIds);
   }
 }
