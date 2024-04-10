@@ -30,7 +30,6 @@ dependencies {
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
     implementation 'com.h2database:h2:2.2.220'
 // https://mvnrepository.com/artifact/com.microsoft.azure/azure-webapp-gradle-plugin
-	implementation 'com.microsoft.azure:azure-webapp-gradle-plugin:1.8.1'
 
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
