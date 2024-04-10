@@ -57,6 +57,7 @@ jobs:
         with:
           app-name: 'price-service-ecom'
           slot-name: 'Production'
-          package: 'priceservice-0.0.1-SNAPSHOT-plain.jar.jar'
+          package: '*.jar'
+
 
           
