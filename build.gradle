@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.2'
 	id 'io.spring.dependency-management' version '1.1.2'
+	id "com.microsoft.azure.azurewebapp" version "1.10.0"
 }
 
 group = 'com.ecommerce'
@@ -19,6 +20,13 @@ configurations {
 
 repositories {
 	mavenCentral()
+}
+
+azurewebapp {
+	resourceGroup = 'appocjsoi_group'
+	appName = 'price-service-4'
+	pricingTier = 'B1'
+	region = 'eastus'
 }
 
 dependencies {

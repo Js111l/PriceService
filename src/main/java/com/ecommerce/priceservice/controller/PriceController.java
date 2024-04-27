@@ -1,13 +1,12 @@
 package com.ecommerce.priceservice.controller;
 
 import com.ecommerce.priceservice.model.ProductPriceModel;
+import com.ecommerce.priceservice.model.ProductPriceRequest;
 import com.ecommerce.priceservice.service.PriceService;
 import java.math.BigDecimal;
 import java.util.List;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/prices")
@@ -19,8 +18,8 @@ public class PriceController {
     this.priceService = priceService;
   }
 
-  @GetMapping()
-  public List<ProductPriceModel> calculateFinalPrice(@RequestBody List<Long> productIds) {
-    return this.priceService.getFinalPrice(productIds);
+  @PostMapping
+  public List<ProductPriceModel> calculateFinalPrice(@RequestBody ProductPriceRequest request) {
+    return this.priceService.getFinalPrice(request.productIds());
   }
 }

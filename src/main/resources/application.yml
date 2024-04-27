@@ -1,4 +1,5 @@
 spring:
+  server: 80
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver

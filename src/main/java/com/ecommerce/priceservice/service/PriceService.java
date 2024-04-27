@@ -41,10 +41,10 @@ public class PriceService {
     products.forEach(product -> {
       final var promotions = this.promotionRepository.fetchProductsPromotions(product.getId());
       final var productPrice = getActivePrice(product);
-      final var finalProductPrice = new AtomicReference<>(BigDecimal.TEN);
+      final var finalProductPrice = new AtomicReference<>(new BigDecimal(String.valueOf(productPrice)));
       final var productPriceModel=new ProductPriceModel();
-
       productPriceModel.setProductId(product.getId());
+
       promotions.forEach(promotion -> {
         var promoApplier = promotionApplierMap.get(promotion.getPromotionType().name());
 
